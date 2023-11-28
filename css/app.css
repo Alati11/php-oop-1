@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+section {
+	padding: 80px 20px;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+    padding: 80px 20px;
+}
+
+ul,
+ol,
+li,
+menu {	
+	list-style: none;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.film {
+    line-height: 1.9em;
+    font-size: 20px;
+}
