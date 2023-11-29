@@ -2,43 +2,44 @@
 
 require_once __DIR__ . '/Models/Movie.php';
 require_once __DIR__ . '/Models/Serie.php';
+require_once __DIR__ .'/Models/Production.php';
 
-    class Production
-    {
-        public $title;
-        public $language;
-        public $rating;
+    // class Production
+    // {
+    //     public $title;
+    //     public $language;
+    //     public $rating;
         
-        function __construct($_title, $_language, $_rating)   
-        {
-        $this->title = $_title;
-        $this->language = $_language;
-        $this->setRating($_rating);
-        }
+    //     function __construct($_title, $_language, $_rating)   
+    //     {
+    //     $this->title = $_title;
+    //     $this->language = $_language;
+    //     $this->setRating($_rating);
+    //     }
 
-        public function myfilms() {
-            echo "Film preferito:";
-        }
+    //     public function myfilms() {
+    //         echo "Film preferito:";
+    //     }
 
-        public function setRating($rating)
-        {
-        if (is_numeric($rating) && $rating >= 3) {
-            $this->rating = intval($rating);    
-            } else {
-                // var_dump('Il voto è troppo basso...');
-                echo 'Il voto è troppo basso...';
-            }
-        }
-        public function getRating()
-        {
-          return $this->rating;
-        }
-        public function getDetails()
-        {
-        return "Title: $this->title <br> Language: $this->language <br> Rating: $this->rating";
-        }
+    //     public function setRating($rating)
+    //     {
+    //     if (is_numeric($rating) && $rating >= 3) {
+    //         $this->rating = intval($rating);    
+    //         } else {
+    //             // var_dump('Il voto è troppo basso...');
+    //             echo 'Il voto è troppo basso...';
+    //         }
+    //     }
+    //     public function getRating()
+    //     {
+    //       return $this->rating;
+    //     }
+    //     public function getDetails()
+    //     {
+    //     return "Title: $this->title <br> Language: $this->language <br> Rating: $this->rating";
+    //     }
 
-    }
+    // }
 
 $film1 = new Production('Seven', 'Italiano', '4');
 $film2 = new Production('Inception', 'Inglese', '3');
@@ -87,8 +88,7 @@ var_dump($film11);
         <?php foreach($films as $production) { ?>
 	    <!-- <li class="film"><?php echo $production->title. ' ' . $production->language. ' '. $production->rating; ?> -->
         <li class="film"><?php echo $production->getDetails() . '<br>' ?>
-        <?php } 
-        ?>
+        <?php } ?>
     </div>
     
 </body>
