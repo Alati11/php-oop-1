@@ -1,8 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../index.php';
-
-class Production
+class Production 
 {
     public $title;
     public $language;
@@ -10,9 +8,9 @@ class Production
     
     function __construct($_title, $_language, $_rating)   
     {
-    $this->title = $_title;
-    $this->language = $_language;
-    $this->setRating($_rating);
+        $this->title = $_title;
+        $this->language = $_language;
+        $this->setRating($_rating);
     }
 
     public function myfilms() {
@@ -21,11 +19,11 @@ class Production
 
     public function setRating($rating)
     {
-    if (is_numeric($rating) && $rating >= 3) {
-        $this->rating = intval($rating);    
+        if (is_numeric($rating) && $rating >= 3) {
+            $this->rating = intval($rating);    
         } else {
-            // var_dump('Il voto è troppo basso...');
-            echo 'Il voto è troppo basso...';
+            var_dump('Il voto è troppo basso...');
+            
         }
     }
     public function getRating()
@@ -34,7 +32,8 @@ class Production
     }
     public function getDetails()
     {
-    return "Title: $this->title <br> Language: $this->language <br> Rating: $this->rating";
+        return "Title: $this->title <br> Language: $this->language <br> Rating: $this->rating <br>
+                Profit: $this->profit <br> Duration: $this->duration <br> Season: $this->season";
     }
-
+var_dump(getDetails());
 }

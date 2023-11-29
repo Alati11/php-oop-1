@@ -6,10 +6,11 @@ class Movie extends Production
     public $profit;
     public $duration;
 
-    function __construct($_profit, $_duration)
+    function __construct($_title, $_language, $_rating, $_profit, $_duration)
     {
-    $this->profit = $_profit;
-    $this->duration = $_duration;    
+        parent::__construct($_title, $_language, $_rating);
+        $this->profit = $_profit;
+        $this->duration = $_duration;    
 
     }
 }

@@ -4,42 +4,6 @@ require_once __DIR__ . '/Models/Movie.php';
 require_once __DIR__ . '/Models/Serie.php';
 require_once __DIR__ .'/Models/Production.php';
 
-    // class Production
-    // {
-    //     public $title;
-    //     public $language;
-    //     public $rating;
-        
-    //     function __construct($_title, $_language, $_rating)   
-    //     {
-    //     $this->title = $_title;
-    //     $this->language = $_language;
-    //     $this->setRating($_rating);
-    //     }
-
-    //     public function myfilms() {
-    //         echo "Film preferito:";
-    //     }
-
-    //     public function setRating($rating)
-    //     {
-    //     if (is_numeric($rating) && $rating >= 3) {
-    //         $this->rating = intval($rating);    
-    //         } else {
-    //             // var_dump('Il voto è troppo basso...');
-    //             echo 'Il voto è troppo basso...';
-    //         }
-    //     }
-    //     public function getRating()
-    //     {
-    //       return $this->rating;
-    //     }
-    //     public function getDetails()
-    //     {
-    //     return "Title: $this->title <br> Language: $this->language <br> Rating: $this->rating";
-    //     }
-
-    // }
 
 $film1 = new Production('Seven', 'Italiano', '4');
 $film2 = new Production('Inception', 'Inglese', '3');
@@ -50,8 +14,10 @@ $film6 = new Production('Dr House', 'Inglese', '5');
 $film7 = new Production('Romanzo criminale', 'Italiano', '4');
 $film8 = new Production('Breaking bad', 'Inglese', '5');
 $film9 = new Production('House of cards', 'Inglese', '3');
-$film10 = new Production('Il trono di spade', 'Italiano', '4');
+$film10 = new Production('Il trono di spade', 'Italiano', '4', "5,3milioni", '100 ore', '8 stagioni');
 
+
+$film11 = new Movie('Il Gladiatore', 'Italiano', '4', '98000euro','130min');
 
 $films = [
     $film1,
@@ -63,13 +29,9 @@ $films = [
     $film8,
     $film9,
     $film10,
-    $movie
+    $film11,
 ];
 
-$film11 = new Movie('Il Gladiatore', 'Italiano', '4', '98000euro','130min');
-
-// var_dump($films);
-var_dump($film11);
 ?>
 
 
