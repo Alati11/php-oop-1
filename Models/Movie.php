@@ -9,9 +9,22 @@ class Movie extends Production
     function __construct($_title, $_language, $_rating, $_profit, $_duration)
     {
         parent::__construct($_title, $_language, $_rating);
-        $this->profit = $_profit;
-        $this->duration = $_duration;    
+        $this->setProfit($_profit);
+        $this->setDuration($_duration);    
 
     }
+
+        public function setProfit(string $profit)
+    {
+        if ($profit) {
+        $this->profit = $profit;
+            }
+    }
+        public function setDuration (string $duration)
+        {
+            if($duration) { 
+                $this->duration = $duration;
+            }
+        }
 }
 

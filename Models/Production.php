@@ -32,7 +32,8 @@ class Production
     }
     public function getDetails()
     {
-        return "Title: $this->title <br> Language: $this->language <br> Rating: $this->rating<br>";
+        return "Title: $this->title <br> Language: $this->language <br> Rating: $this->rating<br> 
+                Profit: $this->profit<br> Duration: $this->duration <br> Season: $this->season";
                 //  Profit: $this->profit <br> Duration: $this->duration <br> Season: $this->season
     }
 
