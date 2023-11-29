@@ -26,18 +26,23 @@ class Production
         echo 'Il voto è troppo basso...';
       }
     }
+    public function getDetails()
+    {
+    return "Title: $this->title <br> Language: $this->language <br> Rating: $this->rating";
+    }
 
 }
 
-$film1 = new Production('Seven - ', 'Inglese', '5');
-$film2 = new Production('Inception - ', 'Inglese', '4');
-$film3 = new Production('C era una volta in America -', 'Italiano', '5');
-$film4 = new Production('Fight Club - ', 'Italiano', '5');
-$film5 = new Production('Il buono, il brutto e il cattivo - ', 'Italiano', '5');
-$film6 = new Production('Matrix - ', 'Inglese', '5');
-$film7 = new Production('L uomo in più - ', 'Italiano', '5');
-$film8 = new Production('Eyes wide shute - ', 'Inglese', '5');
-$film9 = new Production('Eyes wide shute - ', 'Inglese', '2');
+$film1 = new Production('Seven', 'Inglese', '5');
+$film2 = new Production('Inception', 'Inglese', '4');
+$film3 = new Production('C era una volta in America', 'Italiano', '5');
+$film4 = new Production('Fight club', 'Italiano', '5');
+$film5 = new Production('Il buono, il brutto e il cattivo', 'Italiano', '5');
+$film6 = new Production('Dr House', 'Inglese', '5');
+$film7 = new Production('Romanzo criminale', 'Italiano', '5');
+$film8 = new Production('Breaking bad', 'Inglese', '5');
+$film9 = new Production('House of cards', 'Inglese', '4');
+$film10 = new Production('Il trono di spade', 'Italiano', '4');
 
 
 $films = [
@@ -49,6 +54,7 @@ $films = [
     $film7,
     $film8,
     $film9,
+    $film10,
 ];
 // var_dump($films);
 ?>
@@ -67,7 +73,9 @@ $films = [
     <div class="container">
         <h1 class="title">I miei film preferiti</h1>
         <?php foreach($films as $production) { ?>
-	    <li class="film"><?php echo $production->title. ' ' . $production->language. ' '. $production->rating; ?>
+	    <!-- <li class="film"><?php echo $production->title. ' ' . $production->language. ' '. $production->rating; ?> -->
+        <li class="film"><?php echo $production->getDetails() . '<br>' ?>
+
         <?php } ?>
     </div>
     
