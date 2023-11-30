@@ -4,9 +4,9 @@ class Production
 {
     public $title;
     public $language;
-    public $rating;
+    public $rating = 0;
     
-    function __construct($_title, $_language, $_rating)   
+    function __construct($_title, $_language, $_rating = 0)   
     {
         $this->title = $_title;
         $this->language = $_language;
@@ -32,9 +32,7 @@ class Production
     }
     public function getDetails()
     {
-        return "Title: $this->title <br> Language: $this->language <br> Rating: $this->rating<br> 
-                Profit: $this->profit<br> Duration: $this->duration <br> Season: $this->season";
-                //  Profit: $this->profit <br> Duration: $this->duration <br> Season: $this->season
+        return "Title: $this->title <br> Language: $this->language <br> Rating: $this->rating<br>";
     }
 
 }

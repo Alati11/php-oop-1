@@ -14,17 +14,22 @@ class Movie extends Production
 
     }
 
-        public function setProfit(string $profit)
+        public function setProfit(string $_profit)
     {
-        if ($profit) {
-        $this->profit = $profit;
+        if ($_profit) {
+        $this->profit = $_profit;
             }
     }
-        public function setDuration (string $duration)
+        public function setDuration (string $_duration)
         {
-            if($duration) { 
-                $this->duration = $duration;
+            if($_duration) { 
+                $this->duration = $_duration;
             }
         }
+    public function getDetails()
+    { 
+        $details = parent::getDetails(); 
+        return $details . " <br> Profit: $this->profit <br> Duration: $this->duration <br>";
+    }    
 }
 
